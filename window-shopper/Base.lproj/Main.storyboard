@@ -25,30 +25,42 @@
                                     <constraint firstAttribute="width" constant="60" id="inE-qg-l4B"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your Hourly Wage" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jyU-b4-VNF" customClass="CurrencyTxtField" customModule="window_shopper" customModuleProvider="target">
-                                <rect key="frame" x="139" y="139" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Hourly Wage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jyU-b4-VNF" customClass="CurrencyTxtField" customModule="window_shopper" customModuleProvider="target">
+                                <rect key="frame" x="50" y="130" width="275" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Z8E-2u-AHE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Item Price" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dwg-Xc-o3Z" customClass="CurrencyTxtField" customModule="window_shopper" customModuleProvider="target">
-                                <rect key="frame" x="139" y="204" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dwg-Xc-o3Z" customClass="CurrencyTxtField" customModule="window_shopper" customModuleProvider="target">
+                                <rect key="frame" x="50" y="195" width="275" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="dwg-Xc-o3Z" firstAttribute="top" secondItem="jyU-b4-VNF" secondAttribute="bottom" constant="25" id="9ce-Ob-DHX"/>
                             <constraint firstItem="BoJ-XN-1qd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AFk-0L-Cvf"/>
+                            <constraint firstItem="jyU-b4-VNF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Cmq-qO-IM4"/>
+                            <constraint firstItem="dwg-Xc-o3Z" firstAttribute="height" secondItem="jyU-b4-VNF" secondAttribute="height" multiplier="0.85" id="MCV-oZ-vfz"/>
                             <constraint firstItem="BoJ-XN-1qd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="S0M-eO-KGM"/>
                             <constraint firstItem="p29-j6-qxs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="WFp-Sd-BdT"/>
+                            <constraint firstItem="jyU-b4-VNF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-50" id="f6N-1p-mzW"/>
                             <constraint firstItem="BoJ-XN-1qd" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="giU-s6-j6c"/>
                             <constraint firstItem="BoJ-XN-1qd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hy4-St-0yI"/>
+                            <constraint firstItem="jyU-b4-VNF" firstAttribute="top" secondItem="p29-j6-qxs" secondAttribute="bottom" constant="35" id="nfa-8e-X8c"/>
                             <constraint firstItem="p29-j6-qxs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nlV-e2-9at"/>
+                            <constraint firstItem="dwg-Xc-o3Z" firstAttribute="leading" secondItem="jyU-b4-VNF" secondAttribute="leading" id="zcV-7g-Aua"/>
+                            <constraint firstItem="dwg-Xc-o3Z" firstAttribute="trailing" secondItem="jyU-b4-VNF" secondAttribute="trailing" id="zvN-mA-vFl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="priceTxt" destination="dwg-Xc-o3Z" id="l3R-Vp-ilU"/>
+                        <outlet property="wageTxt" destination="jyU-b4-VNF" id="cii-fH-Vae"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
